@@ -2,8 +2,13 @@
 #include <iostream>
 #include <memory>
 
-using namespace std;
 #define BadInput -1
+
+using std::vector;
+using std::exception;
+using std::cout;
+using std::endl;
+using std::shared_ptr;
 
 template <class T>
 std::vector<T> slice(std::vector<T> vec, int start, int step, int stop)

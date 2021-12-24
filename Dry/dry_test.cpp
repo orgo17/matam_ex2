@@ -2,7 +2,12 @@
 #include <iostream>
 #include <memory>
 
-using namespace std;
+// using namespace std;
+using std::vector;
+using std::exception;
+using std::cout;
+using std::endl;
+using std::shared_ptr;
 #define BadInput -1
 
 template <class T>
