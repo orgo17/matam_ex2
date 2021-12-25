@@ -3,7 +3,6 @@
 
 #include <string>
 #include <iostream>
-#include "solution.h"
 
 using std::string;
 using std::ostream;
@@ -29,7 +28,6 @@ namespace mtm
         int getRequiredPoints() const;
 
         //overloaded operators
-        Skill& operator=(const Skill& skill) = default;
         Skill operator++(int);
         Skill& operator+=(int add);
         friend ostream& operator<<(ostream& os, const Skill& skill);

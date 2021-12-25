@@ -1,12 +1,13 @@
 #include <iostream>
-#include "Skill.h"
+#include "../Skill.h"
 #include <cassert>
-#include "exceptions.h"
+#include "../exceptions.h"
 
 using std::cout;
 using mtm::Skill;
 
-int main() {
+int main()
+{    
     Skill s1(1, "C++", 0, 10);
     Skill s2(2, "C", 5, 1);
     s2++;
@@ -26,7 +27,7 @@ int main() {
     assert(s1<=s2);
     assert(s2>=s3);
     try{
-        s1+= -5;
+        s1 += -5;
     }
     catch(mtm::NegativePoints& e){
         cout << "Negative Points" << std::endl;

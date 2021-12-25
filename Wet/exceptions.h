@@ -21,6 +21,22 @@ namespace mtm
         public:
             explicit NegativePoints() = default;
     };
+
+    class SkillAlreadyLearned : public Exception 
+    {
+        public:
+            explicit SkillAlreadyLearned() = default;
+    };
+    class CanNotLearnSkill : public Exception 
+    {
+        public:
+            explicit CanNotLearnSkill() = default;
+    };
+    class DidNotLearnSkill : public Exception 
+    {
+        public:
+            explicit DidNotLearnSkill() = default;
+    };
 }
 
 #endif /* EXCEPTIONS_H_ */

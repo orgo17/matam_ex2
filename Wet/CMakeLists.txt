@@ -18,6 +18,7 @@ set(CMAKE_CPP_FLAGS ${MTM_FLAGS_DEBUG})
 
 
 # Add the names of your source files here
-set(SKILL_CPP_FILES Skill.cpp exceptions.cpp Skill_Test_Main.cpp)
+set(SKILL_CPP_FILES Skill.cpp)
+set(EMPLOYEE_CPP_FILES Citizen.cpp Employee.cpp tests/employee_test.cpp)
 
-add_executable(skill ${SKILL_CPP_FILES})
+add_executable(employee ${SKILL_CPP_FILES} ${EMPLOYEE_CPP_FILES} exceptions.cpp)
