@@ -1,12 +1,14 @@
 #include "Employee.h"
 #include "exceptions.h"
 
+#define INIT_VALUE 0
+
 using mtm::Employee;
 
 namespace mtm
 {
     Employee::Employee(const unsigned int id, const string first_name, const string last_name, const int birth_year):
-            Citizen(id, first_name, last_name, birth_year), salary(0), score(0), skill_set()
+            Citizen(id, first_name, last_name, birth_year), salary(INIT_VALUE), score(INIT_VALUE), skill_set()
     {
 
     }
@@ -22,6 +24,9 @@ namespace mtm
     void Employee::setSalary(const int salary_to_add)
     {
         salary += salary_to_add;
+        if(salary < 0){
+            salary = 0;
+        }
     }
     void Employee::setScore(const int score_to_add)
     {
@@ -64,14 +69,14 @@ namespace mtm
 
     std::ostream& Employee::printShort(std::ostream& os) const
     {
-        os << first_name << " " << last_name << "\n";
+        os << this->getFirstName() << " " << this->getLastName() << "\n";
         os << "Salary: " << salary << " Score: " << score << "\n";
         return os;
     }
     std::ostream& Employee::printLong(std::ostream& os) const
     {
-        os << first_name << " " << last_name << "\n";
-        os << "id - " << id << " birth_year - " << birth_year << "\n";
+        os << this->getFirstName() << " " << this->getLastName() << "\n";
+        os << "id - " << this->getId() << " birth_year - " << this->getBirthYear() << "\n";
         os << "Salary: " << salary << " Score: " << score << " Skills: \n";
         for (Skill skill : skill_set)
         {

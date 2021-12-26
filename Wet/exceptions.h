@@ -37,6 +37,17 @@ namespace mtm
         public:
             explicit DidNotLearnSkill() = default;
     };
+
+    class EmployeeAlreadyHired : public Exception
+    {
+        public:
+            explicit EmployeeAlreadyHired() = default;
+    };
+    class EmployeeNotHired : public Exception
+    {
+        public:
+            explicit EmployeeNotHired() = default;
+    };
 }
 
 #endif /* EXCEPTIONS_H_ */

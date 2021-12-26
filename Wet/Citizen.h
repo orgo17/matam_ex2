@@ -9,7 +9,7 @@ using std::string;
 namespace mtm
 {
     class Citizen{
-        protected:
+        private:
             const unsigned int id;
             const string first_name;
             const string last_name;
