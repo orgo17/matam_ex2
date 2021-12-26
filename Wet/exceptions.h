@@ -48,6 +48,27 @@ namespace mtm
         public:
             explicit EmployeeNotHired() = default;
     };
+
+    class EmployeeNotSelected : public Exception
+    {
+        public:
+            explicit EmployeeNotSelected() = default;
+    };
+    class ManagerIsNotHired : public Exception
+    {
+        public:
+            explicit ManagerIsNotHired() = default;
+    };
+    class ManagerAlreadyHired : public Exception
+    {
+        public:
+            explicit ManagerAlreadyHired() = default;
+    };
+    class CanNotHireManager : public Exception
+    {
+        public:
+            explicit CanNotHireManager() = default;
+    };
 }
 
 #endif /* EXCEPTIONS_H_ */
