@@ -27,6 +27,7 @@ namespace mtm
             //manage employees
             void addEmployee(Employee* const employee_to_add);
             void removeEmployee(unsigned int id_to_remove);
+            void removeAllEmployees();
 
             //print
             std::ostream& printShort(std::ostream& os) const;

@@ -43,10 +43,10 @@ namespace mtm
         public:
             explicit EmployeeAlreadyHired() = default;
     };
-    class EmployeeNotHired : public Exception
+    class EmployeeIsNotHired : public Exception
     {
         public:
-            explicit EmployeeNotHired() = default;
+            explicit EmployeeIsNotHired() = default;
     };
 
     class EmployeeNotSelected : public Exception

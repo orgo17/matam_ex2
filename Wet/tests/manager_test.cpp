@@ -28,7 +28,7 @@ int main()
         m1.removeEmployee(e1.getId());
     }
     catch(mtm::Exception& e){
-        assert(typeid(e).name() == typeid(mtm::EmployeeNotHired).name());
+        assert(typeid(e).name() == typeid(mtm::EmployeeIsNotHired).name());
     }
     cout << "Short_Print" << endl;
     m1.printShort(cout);

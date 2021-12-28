@@ -41,11 +41,21 @@ namespace mtm
         for (Employee* employee : employees)
         {
             if(employee->getId() == id_to_remove){
+                employee->setSalary(-(employee->getSalary()));
                 employees.erase(employee);
                 return;
             }
         }
-        throw mtm::EmployeeNotHired();
+        throw mtm::EmployeeIsNotHired();
+    }
+    
+    void Manager::removeAllEmployees()
+    {
+        for (Employee* employee : employees)
+        {
+            employee->setSalary(-(employee->getSalary()));
+            employees.erase(employee);
+        }
     }
     
     std::ostream& Manager::printShort(std::ostream& os) const
